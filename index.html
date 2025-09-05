@@ -25,8 +25,9 @@
 
 </head>
 
-<body>
-        <header class="navbar bg-base-100 shadow-sm bg-[#BADEFF]">
+<body class="">
+    <header class="">
+        <nav class="navbar bg-base-100 shadow-sm bg-[#BADEFF] px-2">
             <div class="navbar-start">
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -38,37 +39,55 @@
                     </div>
                     <ul tabindex="0"
                         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul class="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        <li class="btn ">FAQ</li>
+                        <li class="btn  ">Learn</li>
+                        <li class="btn  ">LogOut</li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost text-xl ">English <img src="./assets/logo.png"  alt="">জানালা</a>
+                <a class="btn btn-ghost text-xl ">English <img src="./assets/logo.png" alt="">জানালা</a>
             </div>
             <div class="navbar-end hidden lg:flex">
-                <ul class="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul class="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </details>
+                <ul class="menu menu-horizontal px-1 space-x-3">
+                    <li class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i> FAQ</li>
+                    <li class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i> Learn</li>
+                    <li class="btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i> LogOut
                     </li>
-                    <li><a>Item 3</a></li>
                 </ul>
             </div>
-            
-        </header>
-    
+        </nav>
+    </header>
+
+    <section class="flex flex-col-reverse md:flex-row  px-2 items-center gap-6 md:gap-72  text-center md:text-left md:mx-20 mb-8 md:mb-[200px]">
+        <div class="flex-1  flex flex-col items-center justify-center md:items-start  ">
+            <h2 class="text-3xl md:text-5xl font-bold mb-2 md:mb-5"> <span class="text-sky-400">English</span> is Easy!!
+            </h2>
+            <p class="text-[#424249] text-lg md:text-2xl font-semibold font-bangla mb-8 md:leading-[36px]">
+                আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের
+                Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+            </p>
+            <fieldset class="flex flex-col gap-3 w-full items-center md:items-start ">
+                <input type="text" placeholder="Your Name Here" class="input" />
+                <input type="password" placeholder=".................." class="input" />
+                <button class="btn btn-primary">Get Started</button>
+            </fieldset>
+        </div>
+        <div class="flex-1">
+            <img src="./assets/hero-student.png" alt="">
+        </div>
+    </section>
+
+    <main>
+        <section class="border text-center w-11/12 mx-auto mb-8 md:mb-[200px]">
+            <h2 class="text-3xl md:text-5xl font-bold mb-2 md:mb-5"> <span class="text-sky-400">Let's</span> Learn
+                Vocabularies </h2>
+            <div class="flex justify-center flex-wrap gap-4">
+                <button class="btn btn btn-outline btn-primary "><i class="fa-solid fa-book-open"></i> Leason - 1</button>
+            </div>
+
+
+
+        </section>
+    </main>
 
 
 

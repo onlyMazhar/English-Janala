@@ -5,29 +5,40 @@ const loadLeasons = () => {
 };
 
 const loadWordLevel = (id) => {
-    const url = `https://openapi.programming-hero.com/api/level/${id}`;
-    fetch(url)
-    .then(res=> res.json())
-    .then(json => displayWordLevel(json.data))
+  const url = `https://openapi.programming-hero.com/api/level/${id}`;
+  fetch(url)
+    .then((res) => res.json())
+    .then((json) => displayWordLevel(json.data));
 };
 
-
 const displayWordLevel = (words) => {
-    console.log(words)
-    const loadWordLevelContainer = document.getElementById('loadWordLevelContainer');
-    loadWordLevelContainer.innerHTML = '';
-    
-    words.forEach(word => {
-        const wordDiv = document.createElement('div');
-        wordDiv.innerHTML = `
-        <p >${word.word} = ${word.meaning}</p>
-        `
-        loadWordLevelContainer.appendChild(wordDiv)
-    });
+  console.log(words);
+  const loadWordLevelContainer = document.getElementById(
+    "loadWordLevelContainer"
+  );
+  loadWordLevelContainer.innerHTML = "";
 
-
-
-}
+  words.forEach((word) => {
+    const wordDiv = document.createElement("div");
+    wordDiv.innerHTML = `
+        <div class="py-10 px-15 text-center bg-white rounded-xl flex flex-col gap-5 shadow-lg">
+                <h2 class="font-bold text-3xl">${word.word}</h2>
+                <p class="text-xl ">${word.pronunciation}</p>
+                <h2 class="font-semibold text-3xl text-[#424249] mb-4">${word.meaning}</h2>
+                <div class="flex justify-between">
+                    <div class="bg-[#1a91ff1a] p-2 rounded-sm">
+                        <i class="fa-solid fa-circle-info "></i>
+                    </div>
+                    <div class="bg-[#1a91ff1a] p-2 rounded-sm">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </div>
+                </div>
+            </div>
+        
+        `;
+    loadWordLevelContainer.appendChild(wordDiv);
+  });
+};
 
 const displayLessons = (leasons) => {
   // console.log(leasons)

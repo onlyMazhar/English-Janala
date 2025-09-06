@@ -21,7 +21,7 @@ const displayWordLevel = (words) => {
   words.forEach((word) => {
     const wordDiv = document.createElement("div");
     wordDiv.innerHTML = `
-        <div class="py-10 px-15 text-center bg-white rounded-xl flex flex-col gap-5 shadow-lg">
+        <div class="py-10 px-15 text-center bg-white rounded-xl flex flex-col gap-8 shadow-lg h-full">
                 <h2 class="font-bold text-3xl">${word.word}</h2>
                 <p class="text-xl ">${word.pronunciation}</p>
                 <h2 class="font-semibold text-3xl text-[#424249] mb-4">${word.meaning}</h2>
